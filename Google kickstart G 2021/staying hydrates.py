@@ -1,3 +1,28 @@
+"""PARTIALLY SOLVED - SLOW
+Problem 2 Staying Hydrated from Google Kick Start Round G 2021
+
+'Can you help her find a position in the room to keep the bottle'
+
+19/10/21
+
+Example:
+
+input
+2
+3
+0 0 1 1
+2 3 4 6
+0 3 5 9
+1
+0 0 1 1
+
+output
+Case #1: 1 3
+Case #2: 0 0
+
+Can only do the test set 1 in time, fails in test set 2
+"""
+
 import math
 
 
