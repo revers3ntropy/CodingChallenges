@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/josephcoppin/Documents/Projects/CodingChallenges/Google Kickstart 2021 H/Q1 Transform the String.cpp
+iostream
+-
+tuple
+-
+
