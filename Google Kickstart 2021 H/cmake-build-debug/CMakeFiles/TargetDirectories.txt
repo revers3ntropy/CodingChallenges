@@ -1,6 +1,0 @@
-/Users/josephcoppin/Documents/Projects/CodingChallenges/Google Kickstart 2021 H/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/josephcoppin/Documents/Projects/CodingChallenges/Google Kickstart 2021 H/cmake-build-debug/CMakeFiles/E.dir
-/Users/josephcoppin/Documents/Projects/CodingChallenges/Google Kickstart 2021 H/cmake-build-debug/CMakeFiles/S.dir
-/Users/josephcoppin/Documents/Projects/CodingChallenges/Google Kickstart 2021 H/cmake-build-debug/CMakeFiles/P.dir
-/Users/josephcoppin/Documents/Projects/CodingChallenges/Google Kickstart 2021 H/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/josephcoppin/Documents/Projects/CodingChallenges/Google Kickstart 2021 H/cmake-build-debug/CMakeFiles/H.dir
