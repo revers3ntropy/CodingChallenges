@@ -1,5 +1,53 @@
+/*SOLVED
+
+ revers3ntropy
+
+  Problem 1 Transform the String from Google KickStart 2021 Round H
+  https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435914/00000000008da461
+
+  'find the minimum number of operations that are required such that each letter in string S after applying the operations, is present in string F'
+
+  14/11/21
+
+  Took me 1hr... did this at 3 in the morning
+  Really simple solution in the end that took me about 10 minutes
+
+Example 1:
+
+  input
+
+2
+abcd
+a
+pppp
+p
+
+  output
+
+Case #1: 6
+Case #2: 0
+
+ Example 2:
+
+  input
+
+3
+pqrst
+ou
+abd
+abd
+aaaaaaaaaaaaaaab
+aceg
+
+  output
+
+Case #1: 9
+Case #2: 0
+Case #3: 1
+
+*/
+
 #include <iostream>
-#include <tuple>
 
 using namespace std;
 

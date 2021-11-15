@@ -1,7 +1,43 @@
+/*NOT_SOLVED
+
+revers3ntropy
+
+  Problem 2 Painter from Google Kickstart 2021 Round H
+  https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435914/00000000008d9a88
+
+  'what is the minimum number of strokes required to paint it'
+
+  Spent so long on this one! I knew that there was an easier solution, but I couldn't quite figure it out;
+  I tried to implement a brute force method. Saw the solution and thought 'Obviously!'
+
+  14/11/21
+
+Example 1:
+
+  input
+2
+9
+YYYBBBYYY
+6
+YYGGBB
+
+  output
+Case #1: 3
+Case #2: 2
+
+Example 2:
+    input
+1
+5
+ROAOR
+
+    output
+Case #1: 3
+
+*/
+
 #include <iostream>
-#include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
