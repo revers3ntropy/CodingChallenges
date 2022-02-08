@@ -1,2 +1,5 @@
 # Project exclude paths
-/venv/
+venv/
+cmake-build-debug/
+.idea/
+CMakeLists.txt

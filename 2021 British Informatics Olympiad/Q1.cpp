@@ -2,20 +2,24 @@
 
  revers3ntropy
 
+ Joseph Coppin King's Ely Year 12
+
 terminal run command:
-    g++ template.cpp -o template -std=c++20 -stdlib=libc++
+    g++ Q1.cpp -o q1 -std=c++20 -stdlib=libc++
 
-    Problem N name from Competition Year Round N
-    link
+    Problem 1 Down Pat from British Informatics Olympiad 2021
+    https://www.olympiad.org.uk/papers/2021/bio/bio21-exam.pdf
 
-        'Description'
+        Is s1, s2 or s1+s2 a 'pat'?
 
-  Date
+  3/12/21
 
 Example Input 1:
-
+DE C
 Example Output 1:
-
+NO
+YES
+YES
 */
 
 #include <iostream>
@@ -32,7 +36,7 @@ using namespace std;
 #define fori(n) for (int i = 0; i < (n); i++)
 #define forj(m) for (int j = 0; j < (m); j++)
 #define foreach(v) for (auto element : (v))
-#define log(s) cout << s << endl;
+#define log(s) cout << (s) << endl;
 
 typedef unsigned long long int ull;
 typedef long long int ll;
@@ -62,6 +66,11 @@ std::vector<std::string>* split(str s, const str& delimiter = " ") {
     return out;
 }
 
+str reverse_string (str s) {
+    reverse(s.begin(), s.end());
+    return s;
+}
+
 str input () {
     str out;
     getline(cin, out);
@@ -75,23 +84,55 @@ vt<int>* str_to_ints (const str& input, const str& c = " ") {
     return out;
 }
 
-
 // End of template
 
-str solve () {
+bool isPat(str s);
 
-    str i = input();
+bool isPatAtIdx (str s, int idx) {
+    log(idx);
+    str firstHalf = s.substr(0, idx);
+    str secondHalf = s.substr(idx);
 
-    return "";
+    int maxRight;
+    foreach (secondHalf) {
+        if ((int)element > maxRight)
+            maxRight = (int)element;
+    }
+
+    foreach (firstHalf) {
+        if ((int)element > maxRight)
+            return false;
+    }
+
+    if (!isPat(reverse_string(firstHalf)))
+        return false;
+    if (!isPat(reverse_string(secondHalf)))
+        return false;
+
+    return true;
+}
+
+bool isPat (str s) {
+    if (s.size() < 2)
+        return true;
+
+    for (int i = 1; i <= s.size()-1; i++)
+        if (isPatAtIdx(s, i))
+            return true;
+
+    return false;
+}
+
+void solve () {
+    vt<str> i = *split(input());
+    str s1 = i[0];
+    str s2 = i[1];
+    log(isPat(s1) ? "YES" : "NO");
+    log(isPat(s2) ? "YES" : "NO");
+    log(isPat(s1 + s2) ? "YES" : "NO");
 }
 
 int main() {
-    string test_cases_str;
-    cin >> test_cases_str;
-    int test_cases = stoi(test_cases_str);
-
-    fori (test_cases)
-        cout << "Case #" << i+1 << ": " << solve() << endl;
-
+    solve();
     return 0;
 }

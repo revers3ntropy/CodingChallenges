@@ -1,8 +1,1 @@
-
-sum = 0
-
-for i in range(1000):
-    if (i % 5 == 0 or i % 3 == 0) and i > 2:
-        sum += i
-
-print(sum)
+print(sum(n for n in range(1000) if (n % 5 == 0 or n % 3 == 0) and n > 2))

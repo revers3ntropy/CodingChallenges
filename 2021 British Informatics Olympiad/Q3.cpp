@@ -2,15 +2,17 @@
 
  revers3ntropy
 
+ Joseph Coppin King's Ely Year 12
+
 terminal run command:
-    g++ template.cpp -o template -std=c++20 -stdlib=libc++
+    g++ Q1.cpp -o q1 -std=c++20 -stdlib=libc++
 
-    Problem N name from Competition Year Round N
-    link
+    Problem 1 Down Pat from British Informatics Olympiad 2021
+    https://www.olympiad.org.uk/papers/2021/bio/bio21-exam.pdf
 
-        'Description'
 
-  Date
+
+  3/12/21
 
 Example Input 1:
 
@@ -32,7 +34,7 @@ using namespace std;
 #define fori(n) for (int i = 0; i < (n); i++)
 #define forj(m) for (int j = 0; j < (m); j++)
 #define foreach(v) for (auto element : (v))
-#define log(s) cout << n << endl;
+#define log(s) cout << (s) << endl;
 
 typedef unsigned long long int ull;
 typedef long long int ll;
@@ -62,6 +64,11 @@ std::vector<std::string>* split(str s, const str& delimiter = " ") {
     return out;
 }
 
+str reverse_string (str s) {
+    reverse(s.begin(), s.end());
+    return s;
+}
+
 str input () {
     str out;
     getline(cin, out);
@@ -75,23 +82,13 @@ vt<int>* str_to_ints (const str& input, const str& c = " ") {
     return out;
 }
 
-
 // End of template
 
-str solve () {
-
+void solve () {
     str i = input();
-
-    return "";
 }
 
 int main() {
-    string test_cases_str;
-    cin >> test_cases_str;
-    int test_cases = stoi(test_cases_str);
-
-    fori (test_cases)
-        cout << "Case #" << i+1 << ": " << solve() << endl;
-
+    solve();
     return 0;
 }

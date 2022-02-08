@@ -1,23 +1,25 @@
-/* SOLVED
+/* NOT SOLVED
 
  revers3ntropy
 
+ Joseph Coppin King's Ely Year 12
+
 terminal run command:
-    g++ template.cpp -o template -std=c++20 -stdlib=libc++
+    g++ Q1.cpp -o q1 -std=c++20 -stdlib=libc++
 
-    Problem 2 Decoder Ring from British Informatics Olympiad 2018 Round 1
-    https://www.olympiad.org.uk/papers/2018/bio/bio18-exam.pdf
+    Problem 1 Down Pat from British Informatics Olympiad 2021
+    https://www.olympiad.org.uk/papers/2021/bio/bio21-exam.pdf
 
-        'Encrypt a word'
 
-  15/11/21
+
+  3/12/21
 
 Example Input 1:
-5 ABCD
-
+DE C
 Example Output 1:
-EJOTYD
-EOYK
+NO
+YES
+YES
 */
 
 #include <iostream>
@@ -32,8 +34,9 @@ EOYK
 using namespace std;
 
 #define fori(n) for (int i = 0; i < (n); i++)
-#define foreach(n) for (auto element : (n))
-#define log(s) cout << s << endl;
+#define forj(m) for (int j = 0; j < (m); j++)
+#define foreach(v) for (auto element : (v))
+#define log(s) cout << (s) << endl;
 
 typedef unsigned long long int ull;
 typedef long long int ll;
@@ -42,12 +45,11 @@ typedef string str;
 double EPS = 1e-9;
 int INF_I = 1000000005;
 long long INF_LL = 1000000000000000005LL;
-
-#define square(x) ((LL)(x) * (x))
-
 str ALPHABET_L = "abcdefghijklmnopqrstuvwxyz";
 str ALPHABET_U = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 str DIGITS = "0123456789";
+
+#define square(x) ((LL)(x) * (x))
 
 #define vt vector
 
@@ -64,6 +66,11 @@ std::vector<std::string>* split(str s, const str& delimiter = " ") {
     return out;
 }
 
+str reverse_string (str s) {
+    reverse(s.begin(), s.end());
+    return s;
+}
+
 str input () {
     str out;
     getline(cin, out);
@@ -77,48 +84,10 @@ vt<int>* str_to_ints (const str& input, const str& c = " ") {
     return out;
 }
 
-
 // End of template
 
-str generate_cypher (int key) {
-    str alphabet = str(ALPHABET_U);
-
-    int idx = 0;
-    str out;
-    while (!alphabet.empty()) {
-        fori (key-1) {
-            idx++;
-            if (idx >= alphabet.size())
-                idx = 0;
-        }
-        out += alphabet[idx];
-        alphabet.erase (alphabet.begin()+idx);
-    }
-
-    return out;
-}
-
-str encrypt (str cypher, str msg) {
-    str out;
-    foreach (msg) {
-        int idx = ALPHABET_U.find(element);
-        out += cypher[idx];
-
-        char first = cypher[0];
-        cypher.erase(cypher.begin());
-        cypher.push_back(first);
-    }
-    return out;
-}
-
 void solve () {
-    vt<str> inp = *split(input());
-    int key = stoi(inp[0]);
-    str word = inp[1];
-    str cypher = generate_cypher(key);
-    fori(6) cout << cypher[i];
-    cout << endl;
-    log(encrypt(cypher, word));
+    str i = input();
 }
 
 int main() {
